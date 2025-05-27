@@ -1,17 +1,28 @@
-# Node
+# Node modules (backend y frontend)
 node_modules/
-npm-debug.log
 
-# MongoDB
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# MongoDB local volume
 mongo-data/
 
-# Entorno
+# Entornos
 .env
 
 # React build
 frontend/build/
 
-# SO
+# Sistema operativo
 .DS_Store
 Thumbs.db
+
+# VSCode config (si usas este editor)
+.vscode/
+
+# Otros posibles temporales
+*.log
+*.swp
 

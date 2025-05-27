@@ -1,0 +1,14 @@
+# Node.js
+node_modules/
+.env
+
+# Docker
+mongo-data/
+*.log
+
+# OS files
+.DS_Store
+
+# Build files
+dist/
+build/

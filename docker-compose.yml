@@ -4,8 +4,6 @@ services:
     build: ./backend
     ports:
       - "3001:3001"
-    volumes:
-      - ./backend:/app
     container_name: gestor_backend
     depends_on:
       - mongo

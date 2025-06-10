@@ -25,7 +25,12 @@ const libroSchema = new mongoose.Schema({
 
 const Libro = mongoose.model('Libro', libroSchema);
 
-// Rutas
+//ruta raiz
+app.get('/', (req, res)=> {
+  res.send('Backend funcionando correctamente');
+});
+
+// Rutas libros
 app.get('/libros', async (req, res) => {
   const libros = await Libro.find();
   res.json(libros);
@@ -42,7 +47,11 @@ app.delete('/libros/:id', async (req, res) => {
   res.json({ mensaje: 'Libro eliminado' });
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor backend escuchando en http://localhost:${PORT}`);
-});
+if (process.env.NODE_ENV !== 'test'){
+  app.listen(PORT, () => {
+    console.log('servidor backend escuchado en htt://localhost:${PORT}');
+  });
+}
+
+export default app;
 
